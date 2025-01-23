@@ -13,3 +13,5 @@ jobs:
         with:
           head: main
           base: main
+          auto_merge: false
+          auto_approve: false
