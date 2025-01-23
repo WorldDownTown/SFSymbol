@@ -27,6 +27,7 @@ import XCTest
 class ImageExtensionTests: XCTestCase {
     func testImagefromSFSymbol() {
         let imageFromSFSymbol = Image(symbol: SFSymbol4.infinity)
+        print("hello world")
         let imageFromSymbolString = Image(systemName: SFSymbol4.infinity.rawValue)
 
         XCTAssert(imageFromSFSymbol == imageFromSymbolString, "Image(symbol:) is broken")
