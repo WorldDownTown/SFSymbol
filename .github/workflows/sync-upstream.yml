@@ -1,8 +1,9 @@
+# フォーク元リポジトリの変更をフォーク先リポジトリに同期する PR を作成する GitHub Actions ワークフロー
 name: Sync Fork
 
 on:
   schedule:
-    - cron: '0 3 * * 1' # 毎週月曜日 3:00am
+    - cron: "0 3 * * 1" # 毎週月曜日 3:00am
   workflow_dispatch:
 
 jobs:
@@ -11,7 +12,7 @@ jobs:
     steps:
       - uses: tgymnich/fork-sync@v2
         with:
-          head: main
-          base: main
+          head: main # form 元リポジトリのブランチ
+          base: main # fork 先リポジトリの PR マージ対象ブランチ
           auto_merge: false
           auto_approve: false
