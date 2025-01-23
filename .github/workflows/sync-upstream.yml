@@ -10,4 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: tgymnich/fork-sync@v2.0.10
-
+        with:
+          head: main
+          base: main
+          merge_method: rebase
